@@ -1,10 +1,11 @@
 import React,{useState} from 'react'
-import { Link } from 'react-router-dom'
+
+import { Link,useNavigate } from 'react-router-dom'
 
 const Signup = () => {
     const [obj, setObj] = useState({name:"",email:"", password:""})
 
-    
+   const navigate = useNavigate();
 
     const handleChange = (e) =>{
        setObj({...obj,[e.target.name]:e.target.value})
@@ -13,7 +14,10 @@ const Signup = () => {
     const handleClick = (e) => {
         e.preventDefault();
         localStorage.setItem("todo",JSON.stringify(obj))
+            navigate("/login")
          }
+
+       
 
     
     return (
@@ -38,7 +42,7 @@ const Signup = () => {
     
     
     </form>
-    <p>Already have an account? <Link to='/login'>Login</Link></p>
+    <p className='mt-5'>Already have an account? <Link to ="/login">Login</Link></p>
 
 
     </div>
