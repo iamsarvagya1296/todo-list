@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import { Link } from 'react-router-dom'
 
 const Signup = () => {
     const [obj, setObj] = useState({name:"",email:"", password:""})
@@ -37,6 +38,7 @@ const Signup = () => {
     
     
     </form>
+    <p>Already have an account? <Link to='/login'>Login</Link></p>
 
 
     </div>

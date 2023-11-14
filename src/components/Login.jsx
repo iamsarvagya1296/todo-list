@@ -1,16 +1,14 @@
 import React,{useEffect, useState} from 'react'
+import { Link } from 'react-router-dom';
 
 const Login = () => {
-    
+
     const [obj, setObj] = useState({email:"", password:""})
     const [credentials, setCredentials] = useState({});
 
 
     useEffect(() => {
-       
         setCredentials(JSON.parse(localStorage.getItem("todo")))
-    
-      
     }, [])
     
     
@@ -54,6 +52,7 @@ const Login = () => {
     
     
     </form>
+    <p>Don't have an account? <Link to={'/signup'}>Signup</Link></p>
 
 
     </div>
