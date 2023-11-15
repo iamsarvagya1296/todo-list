@@ -9,7 +9,7 @@ function TodoList() {
   const [isEdit, setEdit] = useState(false)
   const [editId,setEditId] = useState(null)
 
-  const handleEditClick = (ele,id) => {
+const handleEditClick = (ele,id) => {
     setEdit(true)
     setEditId(id)
     setTaskInput(ele)
@@ -36,7 +36,7 @@ function TodoList() {
 
   const handleAddClick = (e) => {
     if(isEdit) {
-       let arr =  task.map((ele,index)=>{
+       let arr =  task.map((ele,index)=>{ 
             if(index === editId ){
                 ele=taskInput
             }
@@ -72,7 +72,7 @@ function TodoList() {
             className=" bg-blue-500 text-white px-2"
             onClick={() => handleEditClick(ele,index)}
           >
-            {" "}
+            {/* {" "} */}
             Edit
           </button>
           <button

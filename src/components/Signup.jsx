@@ -14,7 +14,7 @@ const Signup = () => {
     const handleClick = (e) => {
         e.preventDefault();
         localStorage.setItem("todo",JSON.stringify(obj))
-            navigate("/login")
+            navigate("/")
          }
 
        
@@ -42,7 +42,8 @@ const Signup = () => {
     
     
     </form>
-    <p className='mt-5'>Already have an account? <Link to ="/login">Login</Link></p>
+    <p className='mt-5'>Already have an account? <Link to ="/">Login</Link></p>
+    {/* <p className='mt-5'>Already have an account? <span onClick={()=>navigate('/')}>Login</span> </p> */}
 
 
     </div>
